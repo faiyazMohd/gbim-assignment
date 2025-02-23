@@ -1,0 +1,132 @@
+    /* Container */
+.donut-chart-container {
+    background: #faf8ff;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+  }
+  
+  /* Header */
+  .chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .chart-title {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+  }
+  
+  .icon {
+    font-size: 18px;
+    margin-right: 8px;
+  }
+  
+  /* View Details Button */
+  .view-details {
+    background: #2c0c40;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .view-details:hover {
+    background: #3d1057;
+  }
+  
+  /* Chart & Labels */
+  .chart-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  /* Chart */
+  .chart-wrapper {
+    width: 150px;
+    height: 150px;
+    position: relative;
+  }
+  
+  .chart-outline {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 10px solid #d9d9d9;
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
+  
+  /* Labels */
+  .chart-labels {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .label-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+  
+  .label-text {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  .label-value {
+    color: #32b768;
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  .label-keywords {
+    color: #555;
+  }
+  
+  .chart-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+  
+  .label {
+    margin-right: 5px;
+  }
+  
+  .value {
+    color: #32b768;
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  .keywords {
+    color: #555;
+  }
+  

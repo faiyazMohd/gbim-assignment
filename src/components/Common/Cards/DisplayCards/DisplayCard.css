@@ -1,0 +1,76 @@
+
+  
+  .card {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    width: 100%;
+    max-width: 350px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card-left-border {
+    width: 14px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+  }
+  
+  .card-content {
+    flex: 1;
+    padding-left: 16px;
+  }
+  
+  .card-title {
+    font-size: 14px;
+    color: #777;
+    margin: 0;
+  }
+  
+  .card-data {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+  }
+  
+  .card-value {
+    font-size: 28px;
+    font-weight: bold;
+    color: #191847;
+  }
+  
+  .card-percentage {
+    font-size: 16px;
+    color: #36b37e;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .card-icon {
+    margin-left: 4px;
+  }
+  
+  .card-icon-container {
+    /* background: rgba(70, 193, 222, 0.2); */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .card-main-icon {
+    width: 30px;
+    height: 30px;
+  }
+  

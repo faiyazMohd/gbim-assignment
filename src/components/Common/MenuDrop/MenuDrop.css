@@ -1,0 +1,51 @@
+.menu {
+  max-width: 10rem;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.drop-icon {
+  color: #828282;
+  transition: transform 0.3s ease;
+}
+
+.drop-icon.open {
+  transform: rotate(180deg);
+}
+
+.menu-title {
+  font-weight: 600;
+  color: #2D023D;
+  font-size: 0.9em;
+}
+
+.menu-list {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.menu-list.show {
+  max-height: 200px; /* Adjust based on content */
+  opacity: 1;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  transition: background 0.2s;
+  cursor: pointer;
+  font-size: 0.8em;
+  margin-left: 2em;
+
+}

@@ -1,0 +1,62 @@
+.competitor-ads {
+    background: #f9fafb;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .competitor-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .tooltip-icon {
+    margin-left: auto;
+    cursor: pointer;
+  }
+  
+  .ads-container {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+  }
+  
+  .ad-card {
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+    border: 1px solid #D7D7D7;
+    width: 30%;
+  }
+  
+  .ad-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+  }
+  
+  .ad-platform {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .ad-image {
+    width: 100%;
+    border-radius: 8px;
+    margin: 10px 0;
+  }
+  
+  .new-badge {
+    color: #5AD681;
+    background: white;
+    border: 1px solid #5AD681;
+    font-size: 12px;
+    padding: 2  px 12px;
+    border-radius: 15px;
+  }
+  

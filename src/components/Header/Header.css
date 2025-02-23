@@ -1,0 +1,69 @@
+.header {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.header-wrapper{
+    /* padding: 0 2em */
+width: 95%;
+display: flex; 
+justify-content: space-between; 
+align-items: center; 
+margin: 0 auto;
+
+}
+
+.header-first-div {
+    display: flex;
+     align-items: center; 
+     gap: 1.5rem;
+}
+
+.header-logo{
+    width: 9rem
+}
+
+.header-second-div{
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+}
+
+
+.searchIconsContainer{
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+}
+
+
+
+.iconsContainer {
+    width: 25px;
+    height: 25px;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.redDot{
+    width: 7px ;
+    height: 7px ;
+    background-color: #F00000;
+    border-radius: 100%;
+    border: 1px solid white;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+}
