@@ -21,7 +21,7 @@ const Header = () => {
     { name: "Website Audit", icon: websiteAuditIcon },
   ];
   return (
-    <header className="header">
+    <header className="header no-scrollbar">
       <div className="header-wrapper">
         <div className="header-first-div">
           <img
@@ -33,8 +33,6 @@ const Header = () => {
         </div>
 
         <div className="header-second-div">
-          {/* <Button text="My Plan" variant="success" iconClass="vip-crown-fill" />
-           */}
           <div className="searchIconsContainer">
             <div className="iconsContainer">
               <img src={magnifierIcon} className="w-full h-full" />

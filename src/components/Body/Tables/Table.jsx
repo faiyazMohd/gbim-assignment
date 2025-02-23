@@ -26,25 +26,26 @@ const Table = ({ icon, title, headers, data, activeTab }) => {
           <button className="view-details-btn">View Details</button>
         )}
       </div>
-
-      <table className="keywords-table">
-        <thead>
-          <tr>
-            {headers.map((header, index) => (
-              <th key={index}>{header}</th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {data.map((row, rowIndex) => (
-            <tr key={rowIndex}>
-              {headers.map((header, colIndex) => (
-                <td key={colIndex}>{row[colIndex] ?? "-"}</td>
+      <div className="table-wrapper">
+        <table className="keywords-table">
+          <thead>
+            <tr>
+              {headers.map((header, index) => (
+                <th key={index}>{header}</th>
               ))}
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {data.map((row, rowIndex) => (
+              <tr key={rowIndex}>
+                {headers.map((header, colIndex) => (
+                  <td key={colIndex}>{row[colIndex] ?? "-"}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

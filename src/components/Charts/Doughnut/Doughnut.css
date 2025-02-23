@@ -129,4 +129,35 @@
   .keywords {
     color: #555;
   }
+
   
+
+  .doughnutContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px ;
+   
+  }
+  @media screen and (max-width: 856px){
+    .doughnutContainer{
+      flex-wrap: wrap;
+     
+    }
+    
+  }
+  .doughnutBox{
+    width: 75%;
+    gap: 16px;
+    display: flex;
+    align-items: center;
+  }
+  .doughnutBtn{
+   
+  }
+  @media screen and (max-width: 856px){
+    .doughnutBtn{
+     margin-top: 10px;
+    }
+    
+  }

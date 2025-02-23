@@ -1,62 +1,3 @@
-// import React from "react";
-// import Highcharts from "highcharts";
-// import HighchartsReact from "highcharts-react-official";
-
-// const DonutChart = () => {
-//   const options = {
-//     chart: {
-//       type: "pie",
-//       backgroundColor: "transparent",
-//     },
-//     title: {
-//       text: null, // No title
-//     },
-//     plotOptions: {
-//       pie: {
-//         innerSize: "65%", // Donut effect
-//         borderWidth: 4, // Outline width
-//         borderColor: "#D9D9D9", // Gray outline color
-//         depth: 30, // 3D effect
-//         dataLabels: {
-//           enabled: false, // Remove labels
-//         },
-//       },
-//     },
-//     series: [
-//       {
-//         name: "Share",
-//         data: [
-//           {
-//             name: "Branded",
-//             y: 67,
-//             color: "#7367F0", // Purple
-//           },
-//           {
-//             name: "Non-Branded",
-//             y: 33,
-//             color: "#FFA726", // Orange
-//           },
-//         ],
-//       },
-//     ],
-//     credits: {
-//       enabled: false, // Removes Highcharts watermark
-//     },
-//   };
-
-//   return (
-//     <div style={{ display: "flex", alignItems: "center" }}>
-//       {/* Donut Chart */}
-//       <div style={{ width: "200px", height: "200px" }}>
-//         <HighchartsReact highcharts={Highcharts} options={options} />
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default DonutChart;
-
-//?  using chart js
 
 import React from "react";
 import { Doughnut } from "react-chartjs-2";
@@ -128,16 +69,18 @@ const DonutChart = ({ icon, title, headers }) => {
         </div>
       </div>
       <div
+      className="doughnutContainer"
         style={{
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
           padding: "0  16px",
+          flexWrap:"wrap"
         }}
       >
         <div
           className="flex  items-center"
-          style={{ width: "75%", gap: "16px" }}
+          style={{ gap: "16px" }}
         >
           <div
             style={{
@@ -159,11 +102,11 @@ const DonutChart = ({ icon, title, headers }) => {
             ></div>
             <Doughnut data={data} options={options} />
           </div>
-          {/* <div style={{ marginLeft: "" }}>
+          <div style={{ marginLeft: "" }}>
             <div
               style={{
                 display: "flex",
-                alignItems: "space-between",
+                alignItems: "center",
                 justifyContent: "space-between",
               }}
             >
@@ -174,7 +117,7 @@ const DonutChart = ({ icon, title, headers }) => {
                   backgroundColor: "#7D73F0",
                   borderRadius: "50%",
                   display: "inline-block",
-                  marginRight: "8px",
+                  // marginRight: "8px",
                 }}
               ></span>
               <span style={{ fontWeight: "bold", marginRight: "5px" }}>
@@ -190,9 +133,9 @@ const DonutChart = ({ icon, title, headers }) => {
             <div
               style={{
                 display: "flex",
-                alignItems: "space-between",
+                alignItems: "center",
                 justifyContent: "space-between",
-                marginTop: "5px",
+                marginTop: "25px",
               }}
             >
               <span
@@ -211,11 +154,11 @@ const DonutChart = ({ icon, title, headers }) => {
               <span style={{ color: "#32B768", fontWeight: "bold" }}>33%</span>
               <span style={{ marginLeft: "5px" }}>by 452 keywords</span>
             </div>
-          </div> */}
-                <ChartLegend data={labelData} />
+          </div>
+                {/* <ChartLegend data={labelData} /> */}
         </div>
         <div
-          className="flex justify-center items-center"
+          className="flex justify-center items-center doughnutBtn"
           style={{ width: "25%" }}
         >
           <Button text="View Details" variant="primary" textClass=" semibold" />

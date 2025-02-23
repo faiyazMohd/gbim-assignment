@@ -51,14 +51,16 @@
   .view-details:hover {
     background: #f0f0f0;
   }
-  
+  .table-wrapper {
+    overflow-x: auto;
+  }
   /* Table */
   .keywords-table {
     width: 100%;
     border-collapse: collapse;
     background: white;
     border-radius: 8px;
-    overflow: hidden;
+   
   }
   
   .keywords-table th {

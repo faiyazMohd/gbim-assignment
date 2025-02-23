@@ -10,6 +10,11 @@
     display: flex;
     flex-direction: column;
   }
+  @media screen and (max-width: 954px){
+    .chart-card {
+      width: 95%;
+    }
+  }
   
   .chart-card-header {
     display: flex;

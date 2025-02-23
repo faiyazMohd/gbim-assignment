@@ -8,10 +8,10 @@ const ProfileCard = ({ name, role, avatar }) => {
                 {avatar ? <img src={avatar} alt={name} /> : <div className="placeholder"></div>}
             </div>
             <div className="profile-info">
-                <div className="name">
+                <div className="name no-wrap">
                     <span>{name}</span>
                 </div>
-                <div className="role">{role}</div>
+                <div className="role no-wrap">{role}</div>
             </div>
         </div>
     );

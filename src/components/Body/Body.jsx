@@ -14,10 +14,8 @@ import Search from "../.././assets/icons/search.svg";
 import StarBars from "../.././assets/icons/star-bars.svg";
 import Wallet from "../.././assets/icons/wallet.svg";
 import BarImage from "../.././assets/icons/bars.svg";
-import Logout from "../.././assets/icons/logout.svg";
 import planeIcon from "../.././assets/icons/Body/planeIcon.svg";
 import rocketIcon from "../.././assets/icons/Body/rocketIcon.svg";
-import greenPlaneIcon from "../.././assets/icons/Body/greenPlaneIcon.svg";
 import organicTrafficIcon from "../.././assets/icons/Body/organicTrafficIcon.svg";
 import paidTrafficIcon from "../.././assets/icons/Body/paidTrafficIcon.svg";
 import organickeywordsIcon from "../.././assets/icons/Body/organickeywordsIcon.svg";
@@ -36,15 +34,11 @@ import topPaidPagesIcon from "../.././assets/icons/Body/topPaidPagesIcon.svg";
 import adsPromotionIcon from "../.././assets/icons/Body/adsPromotionIcon.svg";
 import MenuDrop from "../Common/MenuDrop/MenuDrop";
 // import LeftDoughnut from '../Common/Doughnut/LeftDougnut';
-import Bars from "../Common/Bars/Bars";
-import { Line } from "react-chartjs-2";
-import Tab from "../Common/Tab/Tab";
 import Button from "../Common/Button/Button";
 import Dropdown from "../Common/Dropdown/Dropdown";
 import DateRangePicker from "../Common/DateRangePicker/DateRangePicker";
 import DisplayCard from "../Common/Cards/DisplayCards/DisplayCard";
 import ChartCard from "./ChartCards/ChartCard";
-import PieChart from "../Charts/PieChart/PieChart";
 import Table from "./Tables/Table";
 import DonutChart from "../Charts/Doughnut/Doughnut";
 import BarChart from "../Charts/BarChart/BarChart";
@@ -54,6 +48,7 @@ import CompetitorAds from "./AdsCards/CompetitorAds";
 
 const Body = () => {
   const [activeTab, setActiveTab] = useState("organic");
+  const [openSidebar, setOpenSidebar] = useState(true);
   const iconsArr = [
     Search,
     FourSqaure,
@@ -268,17 +263,31 @@ const Body = () => {
   return (
     <div className="dashboard-wrapper">
       <div className="left-dashboard-content" style={{ position: "sticky" }}>
-        <div className="menu-icons-wrapper">
+        <div className={`menu-icons-wrapper `}>
           <i className={`ri-arrow-right-s-line chev-right`}></i>
           {iconsArr?.map((data) => (
             <img src={data} alt="menu-icon" className="menu-icon" />
           ))}
         </div>
-        <div className="menu-drop-wrapper">
-          <i className={`ri-arrow-right-s-line chev-right`}></i>
-          {menuLinks?.map((item) => (
-            <MenuDrop title={item?.title} items={item?.links} />
-          ))}
+
+        <div className={`menu-drop-wrapper ${openSidebar ? "" : "close"}`}>
+            <i
+            onClick={() => setOpenSidebar(!openSidebar)}
+              className={`ri-arrow-right-s-line chev-right ${
+                !openSidebar ? "iconOpen" : ""
+              }`}
+            ></i>
+          {/* <i
+            className={`ri-arrow-right-s-line chev-right`}
+            onClick={() => setOpenSidebar(!openSidebar)}
+          ></i> */}
+          {openSidebar &&
+            menuLinks?.map((item) => (
+              <MenuDrop title={item?.title} items={item?.links} />
+            ))}
+          {!openSidebar && (
+            <div className="dummy-link-text">Open </div>
+          )}
         </div>
       </div>
       <div className="right-dashboard-content">
@@ -294,7 +303,7 @@ const Body = () => {
           Domain Overview
         </div>
         {/* custom tabs */}
-        <div className="flex justify-between items-center">
+        <div className="customTabsWrapper">
           <div className="tabs-container">
             <div className="tabs">
               <div
@@ -336,7 +345,7 @@ const Body = () => {
           </div>
         </div>
 
-        <div className="tab-view-actions-wrapper ">
+        <div className="tab-view-actions-wrapper no-scroll">
           <div className="border-r-2 h-full">
             <Dropdown
               options={domainOptions}
@@ -345,8 +354,7 @@ const Body = () => {
             />
           </div>
           <div
-            className="flex justify-between items-center w-full col-span-2 border-r-2 h-full"
-            style={{ padding: "0 10px" }}
+            className="flex justify-between items-center w-full col-span-2 border-r-2 h-full bgmiBlog"
           >
             <div className="no-wrap">Gbim.com/blog/dummyblog</div>
             <Button
@@ -356,7 +364,7 @@ const Body = () => {
               variant="primary rounded-50px"
             />
           </div>
-          <div className="border-r-2 h-full">
+          <div className="border-r-2 h-full" >
             <Dropdown
               options={countryOptions}
               selected={selectedCountry}
@@ -370,7 +378,7 @@ const Body = () => {
               onChange={setSelectedCurrency}
             />
           </div>
-          <div className="h-full">
+          <div className="h-full" >
             <DateRangePicker />
           </div>
         </div>
@@ -486,7 +494,7 @@ const Body = () => {
         </div>
 
         {checkIfPaid(activeTab) && (
-          <div className="mt-16px">
+          <div className="mt-16px CompetitorAdContainer">
             <CompetitorAds
               icon={adsPromotionIcon}
               title={"Competitor Ad Copies"}
